@@ -1,0 +1,79 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/equity.csv",
+      "sha256": "0302c7fa18f1a16864d5443fb99bd744e53c8f05f90544789c94f1010449aa2b",
+      "size_bytes": 45880
+    },
+    {
+      "path": "artifacts/metrics.csv",
+      "sha256": "308403982820b59767319e7323165020d90a906d12f5c3a1df7fc9f7b58221fc",
+      "size_bytes": 379
+    },
+    {
+      "path": "artifacts/ohlcv_BTC-USDT.csv",
+      "sha256": "74d6ec1f58cb63baf911ceec7653dffc330f0106036c39eaad0a162a29393a9f",
+      "size_bytes": 27613
+    },
+    {
+      "path": "artifacts/positions.csv",
+      "sha256": "bfa810bbe9d86615f5a9348b572e54b80af5bf77b830153706c7698cbb9c4bfd",
+      "size_bytes": 9979
+    },
+    {
+      "path": "artifacts/trades.csv",
+      "sha256": "ca5c82e79eba639e9e9c25cfb03bf6e6b502f9f22d521d6ee1d286a24bf40c96",
+      "size_bytes": 749
+    },
+    {
+      "path": "code/signal_engine.py",
+      "sha256": "2881d9dbde21e54c2a53f143ff980b552acd56ff43ebf81d0a377266d2b7dc1d",
+      "size_bytes": 790
+    },
+    {
+      "path": "config.json",
+      "sha256": "aaf805a72af35905bb542ed79e8c0e4874d4c952c14151aedf3f69350c698cd5",
+      "size_bytes": 319
+    }
+  ],
+  "backtest": {
+    "codes": [
+      "BTC-USDT"
+    ],
+    "end_date": "2024-12-31",
+    "engine": "daily",
+    "initial_cash": 1000000,
+    "interval": "1D",
+    "source": "okx",
+    "start_date": "2023-11-13"
+  },
+  "data_sources": [
+    "okx"
+  ],
+  "generated_at": "2026-07-13T19:52:59.038003Z",
+  "metrics": {
+    "annual_return": 0.2215513358008412,
+    "avg_holding_days": 47.0,
+    "benchmark_return": 1.612969,
+    "calmar": 0.5949,
+    "excess_return": -1.357467,
+    "final_value": 1255502.0854381858,
+    "information_ratio": -2.4567,
+    "max_consecutive_loss": 2,
+    "max_drawdown": -0.3724190146023706,
+    "profit_factor": 1.8243,
+    "profit_loss_ratio": 2.7365,
+    "sharpe": 0.7122661918091512,
+    "sortino": 0.8894,
+    "total_return": 0.25550208543818576,
+    "trade_count": 5,
+    "win_rate": 0.4
+  },
+  "reproducibility": {
+    "config_hash": "aaf805a72af35905bb542ed79e8c0e4874d4c952c14151aedf3f69350c698cd5",
+    "strategy_hash": "2881d9dbde21e54c2a53f143ff980b552acd56ff43ebf81d0a377266d2b7dc1d"
+  },
+  "run_dir": "/tmp/claude-0/-home-user-ChicoloCoLab/3fe26846-e986-5b0c-abc1-061fe14ecb7c/scratchpad/btc-ma-run",
+  "schema_version": "0.1",
+  "warnings": []
+}

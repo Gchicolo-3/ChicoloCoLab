@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'none'">
+<title>Alpha Bench Report</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 2em;
+       color: #222; background: #fafafa; }
+h1, h2 { color: #111; }
+table { border-collapse: collapse; width: 100%; background: #fff; }
+th, td { padding: .5em .75em; border-bottom: 1px solid #e5e5e5; text-align: left; }
+th { background: #f0f0f0; }
+.meta { color: #666; font-size: .9em; margin-bottom: 1.5em; }
+.formula { font-family: monospace; background: #f4f4f4; padding: .25em .5em; }
+.skipped { color: #a33; font-size: .9em; }
+</style>
+</head><body>
+<h1>Alpha Bench Report</h1>
+<div class="meta">
+  Generated 2026-07-13T19:59:23+00:00 &middot; Universe sp500 &middot;
+  Period 2018-2025 &middot; 151 tested, 40 skipped
+</div>
+
+<h2>Top 20 by IR</h2>
+<table>
+<tr><th>#</th><th>Alpha ID</th><th>Zoo</th><th>Theme</th>
+    <th>IC mean</th><th>IC std</th><th>IR</th><th>IC+ ratio</th><th>N</th></tr>
+
+<tr>
+  <td>1</td>
+  <td>gtja191_171</td>
+  <td>gtja191</td>
+  <td>microstructure</td>
+  <td>0.0143</td>
+  <td>0.1457</td>
+  <td>0.0981</td>
+  <td>0.5498</td>
+  <td>2010</td>
+</tr>
+
+<tr>
+  <td>2</td>
+  <td>gtja191_117</td>
+  <td>gtja191</td>
+  <td>volume, momentum</td>
+  <td>0.0155</td>
+  <td>0.1617</td>
+  <td>0.0959</td>
+  <td>0.5303</td>
+  <td>1978</td>
+</tr>
+
+<tr>
+  <td>3</td>
+  <td>gtja191_091</td>
+  <td>gtja191</td>
+  <td>volume, reversal</td>
+  <td>0.0124</td>
+  <td>0.1312</td>
+  <td>0.0947</td>
+  <td>0.5286</td>
+  <td>1977</td>
+</tr>
+
+<tr>
+  <td>4</td>
+  <td>gtja191_102</td>
+  <td>gtja191</td>
+  <td>volume</td>
+  <td>0.0065</td>
+  <td>0.0749</td>
+  <td>0.0873</td>
+  <td>0.5291</td>
+  <td>2009</td>
+</tr>
+
+<tr>
+  <td>5</td>
+  <td>gtja191_004</td>
+  <td>gtja191</td>
+  <td>momentum, volume</td>
+  <td>0.0096</td>
+  <td>0.1123</td>
+  <td>0.0856</td>
+  <td>0.5302</td>
+  <td>2003</td>
+</tr>
+
+<tr>
+  <td>6</td>
+  <td>gtja191_085</td>
+  <td>gtja191</td>
+  <td>volume, momentum</td>
+  <td>0.0104</td>
+  <td>0.1267</td>
+  <td>0.0822</td>
+  <td>0.5325</td>
+  <td>1972</td>
+</tr>
+
+<tr>
+  <td>7</td>
+  <td>gtja191_080</td>
+  <td>gtja191</td>
+  <td>volume</td>
+  <td>0.0061</td>
+  <td>0.0754</td>
+  <td>0.0804</td>
+  <td>0.5287</td>
+  <td>2005</td>
+</tr>
+
+<tr>
+  <td>8</td>
+  <td>gtja191_111</td>
+  <td>gtja191</td>
+  <td>volume, microstructure</td>
+  <td>0.0110</td>
+  <td>0.1375</td>
+  <td>0.0800</td>
+  <td>0.5416</td>
+  <td>2009</td>
+</tr>
+
+<tr>
+  <td>9</td>
+  <td>gtja191_184</td>
+  <td>gtja191</td>
+  <td>reversal</td>
+  <td>0.0120</td>
+  <td>0.1498</td>
+  <td>0.0800</td>
+  <td>0.5398</td>
+  <td>1810</td>
+</tr>
+
+<tr>
+  <td>10</td>
+  <td>gtja191_180</td>
+  <td>gtja191</td>
+  <td>volume, reversal</td>
+  <td>0.0081</td>
+  <td>0.1020</td>
+  <td>0.0793</td>
+  <td>0.5309</td>
+  <td>1944</td>
+</tr>
+
+<tr>
+  <td>11</td>
+  <td>gtja191_142</td>
+  <td>gtja191</td>
+  <td>volume, reversal</td>
+  <td>0.0107</td>
+  <td>0.1397</td>
+  <td>0.0764</td>
+  <td>0.5279</td>
+  <td>1987</td>
+</tr>
+
+<tr>
+  <td>12</td>
+  <td>gtja191_065</td>
+  <td>gtja191</td>
+  <td>reversal</td>
+  <td>0.0155</td>
+  <td>0.2031</td>
+  <td>0.0763</td>
+  <td>0.5217</td>
+  <td>2005</td>
+</tr>
+
+<tr>
+  <td>13</td>
+  <td>gtja191_046</td>
+  <td>gtja191</td>
+  <td>reversal</td>
+  <td>0.0149</td>
+  <td>0.2077</td>
+  <td>0.0716</td>
+  <td>0.5204</td>
+  <td>1987</td>
+</tr>
+
+<tr>
+  <td>14</td>
+  <td>gtja191_034</td>
+  <td>gtja191</td>
+  <td>reversal</td>
+  <td>0.0144</td>
+  <td>0.2066</td>
+  <td>0.0695</td>
+  <td>0.5118</td>
+  <td>1999</td>
+</tr>
+
+<tr>
+  <td>15</td>
+  <td>gtja191_048</td>
+  <td>gtja191</td>
+  <td>volume, momentum</td>
+  <td>0.0098</td>
+  <td>0.1412</td>
+  <td>0.0693</td>
+  <td>0.5208</td>
+  <td>1991</td>
+</tr>
+
+<tr>
+  <td>16</td>
+  <td>gtja191_002</td>
+  <td>gtja191</td>
+  <td>reversal, microstructure</td>
+  <td>0.0099</td>
+  <td>0.1443</td>
+  <td>0.0687</td>
+  <td>0.5306</td>
+  <td>2009</td>
+</tr>
+
+<tr>
+  <td>17</td>
+  <td>gtja191_098</td>
+  <td>gtja191</td>
+  <td>reversal</td>
+  <td>0.0099</td>
+  <td>0.1463</td>
+  <td>0.0676</td>
+  <td>0.5137</td>
+  <td>2007</td>
+</tr>
+
+<tr>
+  <td>18</td>
+  <td>gtja191_005</td>
+  <td>gtja191</td>
+  <td>volume</td>
+  <td>0.0065</td>
+  <td>0.0971</td>
+  <td>0.0673</td>
+  <td>0.5290</td>
+  <td>2000</td>
+</tr>
+
+<tr>
+  <td>19</td>
+  <td>gtja191_054</td>
+  <td>gtja191</td>
+  <td>volatility, microstructure</td>
+  <td>0.0100</td>
+  <td>0.1489</td>
+  <td>0.0671</td>
+  <td>0.5132</td>
+  <td>2001</td>
+</tr>
+
+<tr>
+  <td>20</td>
+  <td>gtja191_191</td>
+  <td>gtja191</td>
+  <td>volume</td>
+  <td>0.0081</td>
+  <td>0.1218</td>
+  <td>0.0667</td>
+  <td>0.5249</td>
+  <td>1987</td>
+</tr>
+
+</table>
+
+<h2>Formulas</h2>
+<table>
+<tr><th>Alpha ID</th><th>Formula (LaTeX source)</th></tr>
+
+<tr><td>gtja191_171</td><td class="formula">-1*((l-c)*(o^5))/((c-h)*(c^5))</td></tr>
+
+<tr><td>gtja191_117</td><td class="formula">tsrank(v,32)*(1-tsrank(c+h-l,16))*(1-tsrank(ret,32))</td></tr>
+
+<tr><td>gtja191_091</td><td class="formula">((-1*RANK((CLOSE-MAX(CLOSE,5))))*RANK(CORR(MEAN(VOLUME,40),LOW,5)))</td></tr>
+
+<tr><td>gtja191_102</td><td class="formula">sma(max(volume-delay(volume,1),0),6,1)/sma(abs(volume-delay(volume,1)),6,1)*100</td></tr>
+
+<tr><td>gtja191_004</td><td class="formula">((((SUM(CLOSE,8)/8)+STD(CLOSE,8))&lt;(SUM(CLOSE,2)/2))?(-1):((SUM(CLOSE,2)/2&lt;(SUM(CLOSE,8)/8-STD(CLOSE,8)))?1:((1&lt;(VOLUME/MEAN(VOLUME,20)))?1:(-1))))</td></tr>
+
+<tr><td>gtja191_085</td><td class="formula">(TSRANK((VOLUME/MEAN(VOLUME,20)),20)*TSRANK((-1*DELTA(CLOSE,7)),8))</td></tr>
+
+<tr><td>gtja191_080</td><td class="formula">(VOLUME-DELAY(VOLUME,5))/DELAY(VOLUME,5)*100</td></tr>
+
+<tr><td>gtja191_111</td><td class="formula">sma(v*((c-l)-(h-c))/(h-l),11,2)-sma(v*((c-l)-(h-c))/(h-l),4,2)</td></tr>
+
+<tr><td>gtja191_184</td><td class="formula">see body</td></tr>
+
+<tr><td>gtja191_180</td><td class="formula">see body</td></tr>
+
+<tr><td>gtja191_142</td><td class="formula">see body</td></tr>
+
+<tr><td>gtja191_065</td><td class="formula">MEAN(CLOSE,6)/CLOSE</td></tr>
+
+<tr><td>gtja191_046</td><td class="formula">(MEAN(CLOSE,3)+MEAN(CLOSE,6)+MEAN(CLOSE,12)+MEAN(CLOSE,24))/(4*CLOSE)</td></tr>
+
+<tr><td>gtja191_034</td><td class="formula">MEAN(CLOSE,12)/CLOSE</td></tr>
+
+<tr><td>gtja191_048</td><td class="formula">-1*((RANK((SIGN((CLOSE-DELAY(CLOSE,1)))+SIGN((DELAY(CLOSE,1)-DELAY(CLOSE,2)))+SIGN((DELAY(CLOSE,2)-DELAY(CLOSE,3))))))*SUM(VOLUME,5))/SUM(VOLUME,20)</td></tr>
+
+<tr><td>gtja191_002</td><td class="formula">(-1 * DELTA(((CLOSE - LOW) - (HIGH - CLOSE)) / (HIGH - LOW), 1))</td></tr>
+
+<tr><td>gtja191_098</td><td class="formula">((((DELTA((SUM(CLOSE,100)/100),100)/DELAY(CLOSE,100))&lt;0.05) || ((DELTA((SUM(CLOSE,100)/100),100)/DELAY(CLOSE,100))==0.05)) ? (-1*(CLOSE-TSMIN(CLOSE,100))) : (-1*DELTA(CLOSE,3)))</td></tr>
+
+<tr><td>gtja191_005</td><td class="formula">(-1 * TSMAX(CORR(TSRANK(VOLUME,5), TSRANK(HIGH,5), 5), 3))</td></tr>
+
+<tr><td>gtja191_054</td><td class="formula">((-1*RANK((STD(ABS(CLOSE-OPEN),10)+(CLOSE-OPEN))+CORR(CLOSE,OPEN,10))))</td></tr>
+
+<tr><td>gtja191_191</td><td class="formula">see body</td></tr>
+
+</table>
+
+
+<h2 class="skipped">Skipped / Failed (10 shown)</h2>
+<table>
+<tr><th>Alpha ID</th><th>Reason</th></tr>
+
+<tr><td>gtja191_007</td><td>gtja191_007: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_008</td><td>gtja191_008: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_012</td><td>gtja191_012: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_013</td><td>gtja191_013: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_016</td><td>gtja191_016: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_017</td><td>gtja191_017: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_026</td><td>gtja191_026: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_036</td><td>gtja191_036: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_039</td><td>gtja191_039: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+<tr><td>gtja191_041</td><td>gtja191_041: panel missing required columns [&#39;amount&#39;]</td></tr>
+
+</table>
+
+</body></html>

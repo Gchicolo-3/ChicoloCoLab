@@ -1,0 +1,15 @@
+{
+  "source": "okx",
+  "codes": ["BTC-USDT"],
+  "start_date": "2023-11-13",
+  "end_date": "2024-12-31",
+  "interval": "1D",
+  "initial_cash": 1000000,
+  "commission": 0.001,
+  "extra_fields": null,
+  "fundamental_fields": null,
+  "optimizer": null,
+  "optimizer_params": {},
+  "engine": "daily",
+  "validation": null
+}
