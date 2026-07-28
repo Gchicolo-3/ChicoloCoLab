@@ -439,36 +439,32 @@ h3 {
 }
 .price-amount small { font-size: 0.85rem; color: var(--muted); font-weight: 400; font-family: 'DM Sans', sans-serif; }
 .price-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border2); }
+.price-bestfor { font-size: 0.78rem; color: var(--muted); font-style: italic; line-height: 1.55; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border2); }
+.price-bestfor strong { color: var(--ice); font-style: normal; font-weight: 600; }
 .price-features { list-style: none; display: flex; flex-direction: column; gap: 9px; flex: 1; }
 .price-features li { font-size: 0.82rem; color: var(--ice); display: flex; align-items: flex-start; gap: 9px; }
 .price-features li::before { content: '✓'; color: var(--green); font-weight: 700; font-size: 0.76rem; margin-top: 2px; flex-shrink: 0; }
 .price-cta { margin-top: 24px; }
 
-/* ── ADD-ON MODULES ── */
-.addon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 48px; }
-.addon-item {
+/* ── CAPABILITIES MENU ── */
+.cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 48px; }
+.cap-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   background: var(--card);
   border: 1px solid var(--border2);
   border-radius: 10px;
-  padding: 16px 20px;
+  padding: 15px 20px;
+  font-size: 0.88rem;
+  color: var(--ice);
+  font-weight: 500;
   transition: border-color 0.2s;
 }
-.addon-item:hover { border-color: rgba(200,168,75,0.25); }
-.addon-name { font-size: 0.86rem; color: var(--ice); font-weight: 500; line-height: 1.4; }
-.addon-price {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.82rem;
-  color: var(--gold2);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-@media (max-width: 1080px) {
-  .addon-grid { grid-template-columns: repeat(2, 1fr); }
-}
+.cap-item:hover { border-color: rgba(200,168,75,0.25); }
+.cap-item::before { content: '→'; color: var(--gold); font-size: 0.8rem; flex-shrink: 0; }
+.cap-note { margin-top: 28px; font-size: 0.9rem; color: var(--muted); }
+.cap-note a { color: var(--gold2); font-weight: 600; }
 
 /* ── CRM QUESTIONNAIRE ── */
 .form-bg { background: var(--surface); }
@@ -648,7 +644,7 @@ footer {
   .nav-links { display: none; }
   .hero { padding: 100px 20px 60px; }
   section { padding: 64px 20px; }
-  .services-grid, .cred-grid, .pricing-grid, .proof-grid, .addon-grid { grid-template-columns: 1fr; }
+  .services-grid, .cred-grid, .pricing-grid, .proof-grid, .cap-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; gap: 24px; }
   .steps::before { display: none; }
   .problem { padding: 48px 20px 32px; }
@@ -681,7 +677,7 @@ footer {
     <div class="hero-eyebrow"><span></span> Chicolo Consultative CoLab</div>
     <h1>Find the gaps.<br>Build the system.<br><em>Let it run.</em></h1>
     <p class="hero-sub">
-      Most small businesses are not short on effort. They are short on process. <strong>We find where the time is leaking, build the system to close it, and hand you something that runs without you standing over it.</strong>
+      Most small businesses are not short on effort. They are short on process. <strong>I built my first system for my own business because I was drowning in it. Now I build them for other owners who are.</strong>
     </p>
     <div class="hero-actions">
       <a href="https://calendly.com/gchicolo3/30min" target="_blank" class="btn-primary">Book a Free 30-Minute Call →</a>
@@ -717,7 +713,7 @@ footer {
       </div>
       <div class="problem-item">
         <div class="problem-icon">💸</div>
-        <div class="problem-text">Paying per seat, every month, forever</div>
+        <div class="problem-text">Paying per seat, every month</div>
         <div class="problem-sub">For a platform you use maybe a third of, that was never built for how you work.</div>
       </div>
       <div class="problem-item">
@@ -729,8 +725,39 @@ footer {
   </div>
 </div>
 
+<!-- CREDIBILITY -->
+<section id="about">
+  <div class="section-inner">
+    <div class="cred-grid">
+      <div class="cred-text">
+        <div class="section-label">Origin Story</div>
+        <h2>I built the first one<br><em>for myself.</em></h2>
+        <p>My name is George Chicolo. I run a real estate practice in Hillsdale, New Jersey with my wife Christine.</p>
+        <p>A few years ago I was drowning. Leads slipping through, follow ups I meant to send and never did, admin work eating the hours I should have been selling in. Nothing was connected and everything depended on me remembering it.</p>
+        <p>So I built our own system. Lead tracking, pipeline stages, follow up sequences, transaction activity, all in one place, built around how we actually work instead of how a platform thought we should.</p>
+        <p>It worked. Then a coffee supplier asked if I could do something for his accounts. Then a contractor running his whole business off sticky notes. Then a commercial consultant who needed prospecting to happen without him sitting there doing it.</p>
+        <p>Different industries, same problem every time. <strong>The work is not the bottleneck. The gaps between the work are.</strong></p>
+      </div>
+      <div class="cred-points">
+        <div class="cred-point">
+          <div class="cred-point-icon">🏡</div>
+          <div class="cred-point-text"><strong>I run a business too</strong>Everything I build gets tested in a real operation before it goes to a client. I am not selling you software I have never had to live with.</div>
+        </div>
+        <div class="cred-point">
+          <div class="cred-point-icon">🤝</div>
+          <div class="cred-point-text"><strong>Collaborative by design</strong>CoLab is not just a name. We map your process together, then build around how you actually work.</div>
+        </div>
+        <div class="cred-point">
+          <div class="cred-point-icon">⚡</div>
+          <div class="cred-point-text"><strong>Practical, not theoretical</strong>You get something real and usable, and we adjust from there. No six week discovery phase before you see anything.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
-<section id="services">
+<section id="services" style="background: var(--surface); border-top: 1px solid var(--border2);">
   <div class="section-inner">
     <div class="section-label">What We Build</div>
     <h2>Four ways we help your<br>business run <em>smarter.</em></h2>
@@ -759,7 +786,7 @@ footer {
           <li>Full design and build, concept to live</li>
           <li>Deployed on your domain, under your accounts</li>
           <li>Lead forms, booking links, contact flows</li>
-          <li>Ongoing updates available</li>
+          <li>Updates available as you grow</li>
         </ul>
       </div>
 
@@ -780,74 +807,13 @@ footer {
         <div class="service-num">04</div>
         <div class="service-icon">⚡</div>
         <h3>AI Agency, Done For You</h3>
-        <p class="service-desc">You focus on the business. We handle content, follow-up, and marketing. Powered by AI, reviewed by a human, delivered on time.</p>
+        <p class="service-desc">You focus on the business. We handle content, follow-up, and marketing. Powered by AI, reviewed by a human.</p>
         <ul class="service-list">
-          <li>Monthly content calendar — social, email, and scripts</li>
+          <li>Content calendar — social, email, and scripts</li>
           <li>Lead follow-up sequences built and managed</li>
           <li>New tools deployed as the technology moves</li>
-          <li>Monthly strategy call</li>
+          <li>Regular strategy check-ins</li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="how-bg">
-  <div class="section-inner">
-    <div class="section-label">The Process</div>
-    <h2>From call to live in<br><em>days, not months.</em></h2>
-    <p class="section-sub">No six week discovery phase. No vague timelines. We talk, we scope it, you get something real.</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-title">Free Discovery Call</div>
-        <div class="step-desc">Thirty minutes. We talk about what is actually slowing you down and whether this is even worth building. No pitch, no pressure.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-title">Scope & Fixed Price</div>
-        <div class="step-desc">You get one number before any work starts. No hourly billing, no surprise invoices, no scope creep.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-title">We Build It</div>
-        <div class="step-desc">Fast turnaround. You see progress early. We iterate until it is right, no disappearing for weeks.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-title">Handed Off & Running</div>
-        <div class="step-desc">You own everything. We walk you through it and stay available for updates and future work.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CREDIBILITY -->
-<section id="about">
-  <div class="section-inner">
-    <div class="cred-grid">
-      <div class="cred-text">
-        <div class="section-label">Why This Works</div>
-        <h2>I built this for my<br><em>own business first.</em></h2>
-        <p>My name is George Chicolo. I run a real estate practice in Hillsdale, New Jersey. A few years ago I was drowning. Leads slipping through, follow ups I meant to send and never did, admin work eating the hours I should have been selling in. Nothing was connected and everything depended on me remembering it.</p>
-        <p>So I built my own system. Then I built one for a coffee supplier drowning in spreadsheets, and one for a contractor running his whole business off sticky notes, and one for a commercial consultant who needed prospecting to happen without him.</p>
-        <p>Different industries, same problem every time. <strong>The work is not the bottleneck. The gaps between the work are.</strong></p>
-      </div>
-      <div class="cred-points">
-        <div class="cred-point">
-          <div class="cred-point-icon">🏡</div>
-          <div class="cred-point-text"><strong>I run a business too</strong>Everything I build gets tested in a real operation before it goes to a client. I am not selling you software I have never had to live with.</div>
-        </div>
-        <div class="cred-point">
-          <div class="cred-point-icon">🤝</div>
-          <div class="cred-point-text"><strong>Collaborative by design</strong>CoLab is not just a name. We map your process together, then build around how you actually work. Not how a platform thinks you should.</div>
-        </div>
-        <div class="cred-point">
-          <div class="cred-point-icon">⚡</div>
-          <div class="cred-point-text"><strong>Fast and practical</strong>You get something real in days, and we iterate from there. No six week discovery phase.</div>
-        </div>
       </div>
     </div>
   </div>
@@ -879,24 +845,56 @@ footer {
       <div class="proof-card">
         <div class="proof-name">The Chicolo Group</div>
         <div class="proof-meta">Real estate team · Hillsdale NJ</div>
-        <p class="proof-desc">The one that started it. Full team CRM with lead tracking, pipeline stages, follow up sequences, and transaction activity in one place. Built for my own business, which is how I know it holds up.</p>
+        <p class="proof-desc">The one that started it. Full team CRM with lead tracking, pipeline stages, follow up sequences, and transaction activity in one place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how-bg">
+  <div class="section-inner">
+    <div class="section-label">The Process</div>
+    <h2>From call to<br><em>working system.</em></h2>
+    <p class="section-sub">No six week discovery phase. No vague timelines. We talk, we scope it, you get something real.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Free Discovery Call</div>
+        <div class="step-desc">Thirty minutes. We talk about what is actually slowing you down and whether this is even worth building. No pitch. If I do not think I can help, I will tell you.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Scope & Fixed Price</div>
+        <div class="step-desc">You get one number before any work starts. No hourly billing, no surprise invoices. If the scope changes, we talk about it first.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">We Build It</div>
+        <div class="step-desc">You see progress early and often. We adjust as we go rather than disappearing for a month and hoping it lands.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Handed Off & Running</div>
+        <div class="step-desc">You own everything. We walk you through it and stay available for updates and future work.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" style="background: var(--surface); border-top: 1px solid var(--border2);">
+<section id="pricing" style="background: var(--bg); border-top: 1px solid var(--border2);">
   <div class="section-inner">
     <div class="section-label">Simple Pricing</div>
-    <h2>Flat fees. No surprises.<br><em>No monthly software trap.</em></h2>
-    <p class="section-sub">One number before any work starts. You own what we build. No per seat fees, ever.</p>
+    <h2>Flat fees. One number<br><em>before we start.</em></h2>
+    <p class="section-sub">You own what we build. No per seat licensing, no monthly software you rent forever.</p>
 
     <div class="free-call-banner">
       <div>
         <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);margin-bottom:6px">Free</div>
         <div style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;margin-bottom:4px">Discovery Call — 30 minutes, no charge</div>
-        <div style="font-size:0.84rem;color:var(--muted)">We talk through what is actually slowing you down and whether building anything makes sense. If it does not, I will tell you.</div>
+        <div style="font-size:0.84rem;color:var(--muted)">We talk through what is actually slowing your business down and whether building anything makes sense. If it does not, I will tell you.</div>
       </div>
       <a href="https://calendly.com/gchicolo3/30min" target="_blank" class="btn-primary">Book a Call →</a>
     </div>
@@ -906,13 +904,14 @@ footer {
         <div class="price-tier">Tier 01</div>
         <div class="price-name">Spark</div>
         <div class="price-amount">$997 <small>flat</small></div>
-        <p class="price-desc">One tool, one workflow, built and delivered in days.</p>
+        <p class="price-desc">One tool. One workflow. The thing costing you the most time right now.</p>
         <ul class="price-features">
           <li>One core automation or tool</li>
           <li>Built around your actual process</li>
-          <li>Delivered in days, not weeks</li>
+          <li>Fast turnaround</li>
           <li>Yours to keep, no lock in</li>
         </ul>
+        <div class="price-bestfor"><strong>Best for:</strong> you know exactly what is broken and you want it fixed.</div>
         <div class="price-cta"><a href="#crm-intake" class="btn-ghost" style="display:block;text-align:center;text-decoration:none;">Start Here →</a></div>
       </div>
 
@@ -921,75 +920,88 @@ footer {
         <div class="price-tier">Tier 02</div>
         <div class="price-name">System</div>
         <div class="price-amount">$2,997 <small>flat</small></div>
-        <p class="price-desc">Full custom CRM or AI system. Single user or a very small team.</p>
+        <p class="price-desc">The full build. A custom CRM or AI system that runs your business in one place.</p>
         <ul class="price-features">
-          <li>Custom CRM or multi agent build</li>
+          <li>Custom CRM or multi agent AI build</li>
           <li>Database, dashboard, everything connected</li>
-          <li>Up to three connected workflows</li>
+          <li>Multiple workflows working together</li>
           <li>AI tools trained on your voice</li>
-          <li>Two weeks of support after handoff</li>
+          <li>Support after handoff so you are not left figuring it out alone</li>
         </ul>
+        <div class="price-bestfor"><strong>Best for:</strong> you are running on spreadsheets and sticky notes and you want one system instead of six tools.</div>
         <div class="price-cta"><a href="#crm-intake" class="btn-primary" style="display:block;text-align:center;text-decoration:none;">Start a Project →</a></div>
       </div>
 
       <div class="price-card">
         <div class="price-tier">Tier 03</div>
-        <div class="price-name">Team</div>
-        <div class="price-amount">$5,997 <small>flat</small></div>
-        <p class="price-desc">Multi user build with role separation. Agents, coordinators, admin, manager views.</p>
+        <div class="price-name">Brokerage & Multi User</div>
+        <div class="price-amount" style="font-size:1.5rem;padding:6px 0;">Custom quote</div>
+        <p class="price-desc">Built for teams and organizations where different people need different access, different views, and different data.</p>
         <ul class="price-features">
           <li>Everything in System</li>
-          <li>User roles and permissions</li>
-          <li>Separate views per role</li>
-          <li>Team reporting and dashboards</li>
-          <li>Thirty days of support after handoff</li>
+          <li>User profiles with role based permissions</li>
+          <li>Separate views per role — agent, coordinator, admin, manager</li>
+          <li>Team and office level reporting</li>
+          <li>Onboarding and training for your staff</li>
+          <li>Priority build timeline</li>
         </ul>
+        <div class="price-bestfor">Priced by number of user profiles and scope. Most land between $6,000 and $15,000.<br><strong>Best for:</strong> a growing team, a brokerage, or any operation where one login does not cut it.</div>
         <div class="price-cta"><a href="https://calendly.com/gchicolo3/30min" target="_blank" class="btn-ghost" style="display:block;text-align:center;text-decoration:none;">Let's Talk →</a></div>
       </div>
 
       <div class="price-card">
         <div class="price-tier">Ongoing</div>
         <div class="price-name">Edge</div>
-        <div class="price-amount">$497 <small>/mo solo · $997/mo team</small></div>
-        <p class="price-desc">We stay in your corner. Updates, fixes, and new automations as you grow.</p>
+        <div class="price-amount">$497 <small>/mo</small></div>
+        <p class="price-desc">For businesses that want to keep building instead of standing still.</p>
         <ul class="price-features">
           <li>Ongoing support and fixes</li>
-          <li>New tools and automations monthly</li>
-          <li>Monthly strategy call</li>
-          <li>Priority access via text</li>
+          <li>New automations as your business changes</li>
+          <li>Regular strategy check-ins</li>
+          <li>Direct line to me, not a ticket queue</li>
           <li>Cancel anytime, no contract</li>
         </ul>
         <div class="price-cta"><a href="#crm-intake" class="btn-ghost" style="display:block;text-align:center;text-decoration:none;">Get Started →</a></div>
       </div>
     </div>
-
-    <div style="margin-top:20px;background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;margin-bottom:4px">Brokerage & Multi Office Rollouts</div>
-        <div style="font-size:0.84rem;color:var(--muted)">Custom pricing based on team size, typically $8,000 to $15,000. One build, every agent wins.</div>
-      </div>
-      <a href="https://calendly.com/gchicolo3/30min" target="_blank" class="btn-ghost">Let's Talk →</a>
-    </div>
   </div>
 </section>
 
-<!-- ADD-ON MODULES -->
-<section id="addons" style="background: var(--bg); border-top: 1px solid var(--border2);">
+<!-- CAPABILITIES MENU -->
+<section id="capabilities" style="background: var(--surface); border-top: 1px solid var(--border2);">
   <div class="section-inner">
-    <div class="section-label">Add-On Modules</div>
-    <h2>Need something specific?<br><em>Add it on.</em></h2>
-    <p class="section-sub">Flat priced, published, stacks onto any tier.</p>
+    <div class="section-label">Capabilities</div>
+    <h2>Need something specific?<br><em>We can build it in.</em></h2>
+    <p class="section-sub">Any of these can be added to any build. Priced as part of your scope, because a calendar sync for a solo operator and one for a twelve person team are not the same job.</p>
 
-    <div class="addon-grid">
-      <div class="addon-item"><span class="addon-name">SMS and text automation</span><span class="addon-price">$497</span></div>
-      <div class="addon-item"><span class="addon-name">Calendar and booking sync</span><span class="addon-price">$297</span></div>
-      <div class="addon-item"><span class="addon-name">Email drip sequence, 7 touch</span><span class="addon-price">$497</span></div>
-      <div class="addon-item"><span class="addon-name">Custom reporting dashboard</span><span class="addon-price">$697</span></div>
-      <div class="addon-item"><span class="addon-name">Third party integration, each</span><span class="addon-price">$497</span></div>
-      <div class="addon-item"><span class="addon-name">Data migration from your current CRM</span><span class="addon-price">$497</span></div>
-      <div class="addon-item"><span class="addon-name">Additional user role</span><span class="addon-price">$197</span></div>
-      <div class="addon-item"><span class="addon-name">AI voice or call handling</span><span class="addon-price">$997</span></div>
-      <div class="addon-item"><span class="addon-name">Extra training session</span><span class="addon-price">$297</span></div>
+    <div class="cap-grid">
+      <div class="cap-item">Text and SMS automation</div>
+      <div class="cap-item">Calendar and booking sync</div>
+      <div class="cap-item">Email sequences and drip campaigns</div>
+      <div class="cap-item">Custom reporting dashboards</div>
+      <div class="cap-item">Third party integrations</div>
+      <div class="cap-item">Data migration from your current system</div>
+      <div class="cap-item">Additional user roles and permissions</div>
+      <div class="cap-item">AI voice and call handling</div>
+      <div class="cap-item">Document and contract automation</div>
+      <div class="cap-item">Route and job scheduling</div>
+      <div class="cap-item">Client portals</div>
+      <div class="cap-item">Team training sessions</div>
+    </div>
+
+    <p class="cap-note">Not sure what you need? <a href="https://calendly.com/gchicolo3/30min" target="_blank">That is what the discovery call is for.</a></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="section-label" style="text-align:center">The Bottom Line</div>
+    <h2>The businesses that figure this<br>out now <em>pull ahead.</em></h2>
+    <p>The ones that wait spend the next two years catching up. You do not need to overhaul everything at once. You need one build that puts the right foundation in place. Let's figure out what that looks like.</p>
+    <div class="cta-actions">
+      <a href="https://calendly.com/gchicolo3/30min" target="_blank" class="btn-primary">Book a Free 30-Minute Call →</a>
+      <a href="#crm-intake" class="btn-ghost">Start a Project →</a>
     </div>
   </div>
 </section>
@@ -1204,19 +1216,6 @@ footer {
         <h2>Got it — we'll be in touch.</h2>
         <p>Your project request came through. George will review everything and reach out within 24 hours to set up a quick call. Looking forward to building something great together.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-inner">
-    <div class="section-label" style="text-align:center">The Bottom Line</div>
-    <h2>The businesses that figure this<br>out now <em>pull ahead.</em></h2>
-    <p>The ones that wait spend the next two years catching up. You do not need to overhaul everything. You need one build that puts the right foundation in place. Let's figure out what that looks like.</p>
-    <div class="cta-actions">
-      <a href="https://calendly.com/gchicolo3/30min" target="_blank" class="btn-primary">Book a Free 30-Minute Call →</a>
-      <a href="#crm-intake" class="btn-ghost">Start a Project →</a>
     </div>
   </div>
 </section>
