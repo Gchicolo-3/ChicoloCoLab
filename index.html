@@ -369,7 +369,41 @@ h3 {
 .proof-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
 
 /* ── PRICING ── */
-.pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.pay-option {
+  background: var(--card2);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.pay-option.plan { border-color: rgba(200,168,75,0.35); }
+.pay-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.pay-option.plan .pay-label { color: var(--gold); }
+.pay-price { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 800; color: #fff; line-height: 1.3; }
+.pay-price small { font-size: 0.74rem; color: var(--muted); font-family: 'DM Sans', sans-serif; font-weight: 400; }
+.pay-note { font-size: 0.72rem; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+.plan-includes-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 16px 0 10px;
+}
+.pricing-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+.info-card { background: var(--card); border: 1px solid var(--border2); border-radius: 14px; padding: 26px 28px; }
+.info-card-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: #fff; margin-bottom: 10px; }
+.info-card p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; margin-bottom: 10px; }
+.info-card p strong { color: var(--ice); font-weight: 600; }
+.pricing-term-note { margin-top: 20px; font-size: 0.8rem; color: var(--muted); line-height: 1.6; text-align: center; }
 .free-call-banner {
   margin-top: 48px;
   background: var(--card);
@@ -644,7 +678,7 @@ footer {
   .nav-links { display: none; }
   .hero { padding: 100px 20px 60px; }
   section { padding: 64px 20px; }
-  .services-grid, .cred-grid, .pricing-grid, .proof-grid, .cap-grid { grid-template-columns: 1fr; }
+  .services-grid, .cred-grid, .pricing-grid, .proof-grid, .cap-grid, .pricing-info-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; gap: 24px; }
   .steps::before { display: none; }
   .problem { padding: 48px 20px 32px; }
@@ -887,8 +921,8 @@ footer {
 <section id="pricing" style="background: var(--bg); border-top: 1px solid var(--border2);">
   <div class="section-inner">
     <div class="section-label">Simple Pricing</div>
-    <h2>Flat fees. One number<br><em>before we start.</em></h2>
-    <p class="section-sub">You own what we build. No per seat licensing, no monthly software you rent forever.</p>
+    <h2>Own it outright, or<br><em>build on a plan.</em></h2>
+    <p class="section-sub">Every system comes two ways. Pay once and own it, or put less down and keep building month by month. Either way it is your system, built around how you work.</p>
 
     <div class="free-call-banner">
       <div>
@@ -901,69 +935,90 @@ footer {
 
     <div class="pricing-grid">
       <div class="price-card">
-        <div class="price-tier">Tier 01</div>
-        <div class="price-name">Spark</div>
-        <div class="price-amount">$997 <small>flat</small></div>
-        <p class="price-desc">One tool. One workflow. The thing costing you the most time right now.</p>
+        <div class="price-tier">Solo</div>
+        <div class="price-name">One person,<br>one login</div>
+        <p class="price-desc">A Spark build — one tool, or a simple single user CRM. The thing costing you the most time right now.</p>
+        <div class="pay-option">
+          <div class="pay-label">Own it</div>
+          <div class="pay-price">$997 <small>flat</small></div>
+          <div class="pay-note">Optional Care support after, $197/mo</div>
+        </div>
+        <div class="pay-option plan">
+          <div class="pay-label">On plan</div>
+          <div class="pay-price">$297 <small>down</small> + $397<small>/mo, 12 months</small></div>
+        </div>
+        <div class="plan-includes-label">The plan month includes</div>
         <ul class="price-features">
-          <li>One core automation or tool</li>
-          <li>Built around your actual process</li>
-          <li>Fast turnaround</li>
-          <li>Yours to keep, no lock in</li>
+          <li>One build request per month</li>
+          <li>Everything in Care</li>
+          <li>Quarterly 30 minute call</li>
         </ul>
-        <div class="price-bestfor"><strong>Best for:</strong> you know exactly what is broken and you want it fixed.</div>
         <div class="price-cta"><a href="#crm-intake" class="btn-ghost" style="display:block;text-align:center;text-decoration:none;">Start Here →</a></div>
       </div>
 
       <div class="price-card featured">
         <div class="featured-tag">⭐ Most Popular</div>
-        <div class="price-tier">Tier 02</div>
-        <div class="price-name">System</div>
-        <div class="price-amount">$2,997 <small>flat</small></div>
-        <p class="price-desc">The full build. A custom CRM or AI system that runs your business in one place.</p>
+        <div class="price-tier">Team</div>
+        <div class="price-name">Two to nine people</div>
+        <p class="price-desc">A System build — full custom CRM with role based access for coordinators, admin, and agents.</p>
+        <div class="pay-option">
+          <div class="pay-label">Own it</div>
+          <div class="pay-price">$2,997 <small>flat</small></div>
+          <div class="pay-note">Optional Care support after, $297/mo</div>
+        </div>
+        <div class="pay-option plan">
+          <div class="pay-label">On plan</div>
+          <div class="pay-price">$997 <small>down</small> + $697<small>/mo, 12 months</small></div>
+        </div>
+        <div class="plan-includes-label">The plan month includes</div>
         <ul class="price-features">
-          <li>Custom CRM or multi agent AI build</li>
-          <li>Database, dashboard, everything connected</li>
-          <li>Multiple workflows working together</li>
-          <li>AI tools trained on your voice</li>
-          <li>Support after handoff so you are not left figuring it out alone</li>
+          <li>Two build requests per month</li>
+          <li>Everything in Care</li>
+          <li>Monthly 30 minute strategy call</li>
+          <li>Team onboarding for new hires</li>
         </ul>
-        <div class="price-bestfor"><strong>Best for:</strong> you are running on spreadsheets and sticky notes and you want one system instead of six tools.</div>
         <div class="price-cta"><a href="#crm-intake" class="btn-primary" style="display:block;text-align:center;text-decoration:none;">Start a Project →</a></div>
       </div>
 
       <div class="price-card">
-        <div class="price-tier">Tier 03</div>
-        <div class="price-name">Brokerage & Multi User</div>
-        <div class="price-amount" style="font-size:1.5rem;padding:6px 0;">Custom quote</div>
-        <p class="price-desc">Built for teams and organizations where different people need different access, different views, and different data.</p>
+        <div class="price-tier">Brokerage</div>
+        <div class="price-name">Ten plus,<br>office or multi office</div>
+        <p class="price-desc">Custom scope. Role based views, office level reporting, and onboarding for your whole operation.</p>
+        <div class="pay-option">
+          <div class="pay-label">Own it</div>
+          <div class="pay-price">$8,000–$15,000 <small>by scope</small></div>
+          <div class="pay-note">Optional Care support after, $497/mo</div>
+        </div>
+        <div class="pay-option plan">
+          <div class="pay-label">On plan</div>
+          <div class="pay-price">$2,997 <small>down</small> + $1,497<small>/mo, 12 months</small></div>
+        </div>
+        <div class="plan-includes-label">The plan month includes</div>
         <ul class="price-features">
-          <li>Everything in System</li>
-          <li>User profiles with role based permissions</li>
-          <li>Separate views per role — agent, coordinator, admin, manager</li>
-          <li>Team and office level reporting</li>
-          <li>Onboarding and training for your staff</li>
-          <li>Priority build timeline</li>
+          <li>Four build requests per month</li>
+          <li>Everything in Care</li>
+          <li>Monthly strategy call, quarterly review with leadership</li>
+          <li>Agent onboarding and training sessions</li>
+          <li>Office level reporting</li>
         </ul>
-        <div class="price-bestfor">Priced by number of user profiles and scope. Most land between $6,000 and $15,000.<br><strong>Best for:</strong> a growing team, a brokerage, or any operation where one login does not cut it.</div>
         <div class="price-cta"><a href="https://calendly.com/gchicolo3/30min" target="_blank" class="btn-ghost" style="display:block;text-align:center;text-decoration:none;">Let's Talk →</a></div>
       </div>
+    </div>
 
-      <div class="price-card">
-        <div class="price-tier">Ongoing</div>
-        <div class="price-name">Edge</div>
-        <div class="price-amount">$497 <small>/mo</small></div>
-        <p class="price-desc">For businesses that want to keep building instead of standing still.</p>
-        <ul class="price-features">
-          <li>Ongoing support and fixes</li>
-          <li>New automations as your business changes</li>
-          <li>Regular strategy check-ins</li>
-          <li>Direct line to me, not a ticket queue</li>
-          <li>Cancel anytime, no contract</li>
-        </ul>
-        <div class="price-cta"><a href="#crm-intake" class="btn-ghost" style="display:block;text-align:center;text-decoration:none;">Get Started →</a></div>
+    <div class="pricing-info-grid">
+      <div class="info-card">
+        <div class="info-card-title">What is a build request?</div>
+        <p>One specific thing you want changed, added, or automated. Add a new pipeline stage. Build a follow up sequence for expired listings. Connect your lead sources to the CRM. Add a report showing which lead source actually closes. Automate a checklist handoff. Add a new user role.</p>
+        <p>Requests are scoped as part of your plan — a bigger job spans more than one month or gets quoted separately. Requests do not roll over month to month.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-title">Care — support without builds</div>
+        <p><strong>$197/mo solo · $297/mo team · $497/mo brokerage</strong></p>
+        <p>Hosting, database, and uptime. Unlimited bug fixes. Email and text support. Security and dependency updates. No build requests — just your system, kept running. Month to month, and every plan includes all of it.</p>
       </div>
     </div>
+
+    <p class="pricing-term-note">On plan pricing is a twelve month term — the lower build cost is possible because the commitment covers it. Care is month to month.<br>Think of the plan as a technical person on retainer who already knows your business, for less than a part time assistant.</p>
   </div>
 </section>
 
