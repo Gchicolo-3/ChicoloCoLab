@@ -1,0 +1,81 @@
+      "category": "dead"
+    },
+    {
+      "id": "gtja191_002",
+      "zoo": "gtja191",
+      "theme": [
+        "reversal",
+        "microstructure"
+      ],
+      "formula_latex": "(-1 * DELTA(((CLOSE - LOW) - (HIGH - CLOSE)) / (HIGH - LOW), 1))",
+      "ic_mean": 0.009921,
+      "ic_std": 0.144317,
+      "ir": 0.0687,
+      "ic_positive_ratio": 0.5306,
+      "ic_count": 2009,
+      "category": "dead"
+    },
+    {
+      "id": "gtja191_098",
+      "zoo": "gtja191",
+      "theme": [
+        "reversal"
+      ],
+      "formula_latex": "((((DELTA((SUM(CLOSE,100)/100),100)/DELAY(CLOSE,100))<0.05) || ((DELTA((SUM(CLOSE,100)/100),100)/DELAY(CLOSE,100))==0.05)) ? (-1*(CLOSE-TSMIN(CLOSE,100))) : (-1*DELTA(CLOSE,3)))",
+      "ic_mean": 0.009881,
+      "ic_std": 0.146261,
+      "ir": 0.0676,
+      "ic_positive_ratio": 0.5137,
+      "ic_count": 2007,
+      "category": "dead"
+    },
+    {
+      "id": "gtja191_005",
+      "zoo": "gtja191",
+      "theme": [
+        "volume"
+      ],
+      "formula_latex": "(-1 * TSMAX(CORR(TSRANK(VOLUME,5), TSRANK(HIGH,5), 5), 3))",
+      "ic_mean": 0.006528,
+      "ic_std": 0.097051,
+      "ir": 0.0673,
+      "ic_positive_ratio": 0.529,
+      "ic_count": 2000,
+      "category": "dead"
+    },
+    {
+      "id": "gtja191_054",
+      "zoo": "gtja191",
+      "theme": [
+        "volatility",
+        "microstructure"
+      ],
+      "formula_latex": "((-1*RANK((STD(ABS(CLOSE-OPEN),10)+(CLOSE-OPEN))+CORR(CLOSE,OPEN,10))))",
+      "ic_mean": 0.009981,
+      "ic_std": 0.148851,
+      "ir": 0.0671,
+      "ic_positive_ratio": 0.5132,
+      "ic_count": 2001,
+      "category": "dead"
+    },
+    {
+      "id": "gtja191_191",
+      "zoo": "gtja191",
+      "theme": [
+        "volume"
+      ],
+      "formula_latex": "see body",
+      "ic_mean": 0.008123,
+      "ic_std": 0.121796,
+      "ir": 0.0667,
+      "ic_positive_ratio": 0.5249,
+      "ic_count": 1987,
+      "category": "dead"
+    }
+  ],
+  "wall_seconds": 476.45,
+  "report_path": "/root/.vibe-trading/reports/alpha_bench_20260713T195923Z.html"
+}
+✓ Bench complete. 151 tested, 40 skipped. Report: 
+/root/.vibe-trading/reports/alpha_bench_20260713T195923Z.html
+EXIT: 0
