@@ -539,7 +539,14 @@ h3 {
   color: var(--gold);
   margin-bottom: 6px;
 }
-.price-path .price-amount { font-size: 1.5rem; margin-bottom: 4px; }
+.path-price {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
 .path-note { font-size: 0.8rem; color: var(--muted); }
 .or-divider {
   display: flex;
@@ -599,9 +606,11 @@ h3 {
 .addon-name { font-size: 0.85rem; color: var(--ice); line-height: 1.4; }
 .addon-price {
   font-family: 'DM Mono', monospace;
-  font-size: 0.85rem;
+  font-size: 0.62rem;
   font-weight: 500;
-  color: var(--gold2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
   white-space: nowrap;
 }
 
@@ -857,7 +866,7 @@ footer {
   <div class="nav-links" id="nav-links">
     <a href="#services">Services</a>
     <a href="#how">How It Works</a>
-    <a href="#pricing">Pricing</a>
+    <a href="#pricing">Packages</a>
     <a href="#book">Book a Call</a>
   </div>
   <div class="nav-right">
@@ -1081,9 +1090,9 @@ footer {
 <!-- PRICING -->
 <section id="pricing" style="background: var(--surface); border-top: 1px solid var(--border2);">
   <div class="section-inner">
-    <div class="section-label">Simple Pricing</div>
+    <div class="section-label">Packages</div>
     <h2>Own it outright.<br><em>Or build as you go.</em></h2>
-    <p class="section-sub">Every number is flat and published. Pay once and own everything, or start smaller with a monthly plan that keeps us building for you. You own the system either way — no per-seat fees, ever.</p>
+    <p class="section-sub">Every quote is flat and fixed — you get one number on the discovery call, before any work starts. Pay once and own everything, or start smaller with a monthly plan that keeps us building for you. You own the system either way — no per-seat fees, ever.</p>
 
     <div class="price-banner">
       <div>
@@ -1101,18 +1110,18 @@ footer {
         <p class="price-desc">One person, one login. One core tool or a simple single-user CRM, built and delivered in days.</p>
         <div class="price-path">
           <div class="path-tag">Own It</div>
-          <div class="price-amount">$997 <small>one-time</small></div>
-          <div class="path-note">Optional Care plan after handoff — $197/mo</div>
+          <div class="path-price">One flat fee, quoted on your discovery call</div>
+          <div class="path-note">Pay once, own it outright · Optional Care plan after handoff</div>
         </div>
         <div class="or-divider">or</div>
         <div class="price-path">
           <div class="path-tag">On Plan</div>
-          <div class="price-amount">$297 <small>down</small> + $397<small>/mo</small></div>
+          <div class="path-price">Smaller start + a fixed monthly, 12 months</div>
           <ul class="price-features">
             <li>One build request every month</li>
             <li>Hosting, uptime & unlimited bug fixes</li>
             <li>Quarterly strategy call</li>
-            <li>12-month plan — that's what makes the lower start possible</li>
+            <li>The plan is what makes the lower start possible</li>
           </ul>
         </div>
         <div class="price-spacer"></div>
@@ -1126,19 +1135,19 @@ footer {
         <p class="price-desc">Full custom CRM with role-based access. Agents, coordinator, admin — everyone in one system.</p>
         <div class="price-path">
           <div class="path-tag">Own It</div>
-          <div class="price-amount">$2,997 <small>one-time</small></div>
-          <div class="path-note">Optional Care plan after handoff — $297/mo</div>
+          <div class="path-price">One flat fee, quoted on your discovery call</div>
+          <div class="path-note">Pay once, own it outright · Optional Care plan after handoff</div>
         </div>
         <div class="or-divider">or</div>
         <div class="price-path">
           <div class="path-tag">On Plan</div>
-          <div class="price-amount">$997 <small>down</small> + $697<small>/mo</small></div>
+          <div class="path-price">Smaller start + a fixed monthly, 12 months</div>
           <ul class="price-features">
             <li>Two build requests every month</li>
             <li>Hosting, uptime & unlimited bug fixes</li>
             <li>Monthly strategy call</li>
             <li>Team onboarding for new hires</li>
-            <li>12-month plan — that's what makes the lower start possible</li>
+            <li>The plan is what makes the lower start possible</li>
           </ul>
         </div>
         <div class="price-spacer"></div>
@@ -1151,13 +1160,13 @@ footer {
         <p class="price-desc">Office or multi-office rollout, scoped to your operation. One build, every agent wins.</p>
         <div class="price-path">
           <div class="path-tag">Own It</div>
-          <div class="price-amount">$8,000–$15,000</div>
-          <div class="path-note">Depending on scope · Optional Care plan — $497/mo</div>
+          <div class="path-price">Custom scope, one fixed quote</div>
+          <div class="path-note">Priced by scope and team size · Optional Care plan after handoff</div>
         </div>
         <div class="or-divider">or</div>
         <div class="price-path">
           <div class="path-tag">On Plan</div>
-          <div class="price-amount">$2,997 <small>down</small> + $1,497<small>/mo</small></div>
+          <div class="path-price">Smaller start + a fixed monthly, 12 months</div>
           <ul class="price-features">
             <li>Four build requests every month</li>
             <li>Hosting, uptime & unlimited bug fixes</li>
@@ -1173,14 +1182,14 @@ footer {
 
     <div class="request-strip">
       <h3>What's a build request?</h3>
-      <p class="request-desc">One specific thing changed, added, or automated — a new pipeline stage, a follow-up sequence for expired listings, Zillow leads flowing straight into your CRM, a report showing which lead source actually closes. A dev shop bills $500–$1,500 for the same request. On plan, it's built into your month.</p>
+      <p class="request-desc">One specific thing changed, added, or automated — a new pipeline stage, a follow-up sequence for expired listings, Zillow leads flowing straight into your CRM, a report showing which lead source actually closes. The kind of work a dev shop bills by the hour for. On plan, it's built into your month.</p>
       <p class="request-rules">The ground rules, up front: we scope each request together, requests don't roll over month to month, and bigger items — new API integrations, data migrations, full redesigns — get their own flat quote first. Plans run 12 months; Care is month-to-month, cancel anytime.</p>
     </div>
 
     <div class="brokerage-box">
       <div>
         <div class="brokerage-title">Care — the keep-it-running plan</div>
-        <div class="brokerage-desc">$197/mo solo · $297/mo team · $497/mo brokerage. Hosting, database, uptime, unlimited bug fixes, security updates, and support — no build work, no term. Included in every On-Plan tier, optional after any Own-It build.</div>
+        <div class="brokerage-desc">Hosting, database, uptime, unlimited bug fixes, security updates, and support — no build work, no term. A flat monthly by segment, month-to-month, cancel anytime. Included in every On-Plan tier, optional after any Own-It build.</div>
       </div>
       <a href="#crm-intake" class="btn-ghost">Get Started →</a>
     </div>
@@ -1192,18 +1201,18 @@ footer {
   <div class="section-inner">
     <div class="section-label">Add-On Modules</div>
     <h2>Need something specific?<br><em>Add it on.</em></h2>
-    <p class="section-sub">Flat-priced, published, stacks onto any tier.</p>
+    <p class="section-sub">Each one flat-priced and scoped up front — stack them onto any package. We'll quote your exact stack on the call.</p>
 
     <div class="addons-grid">
-      <div class="addon"><span class="addon-name">SMS & text automation</span><span class="addon-price">$497</span></div>
-      <div class="addon"><span class="addon-name">Calendar & booking sync</span><span class="addon-price">$297</span></div>
-      <div class="addon"><span class="addon-name">Email drip sequence, 7-touch</span><span class="addon-price">$497</span></div>
-      <div class="addon"><span class="addon-name">Custom reporting dashboard</span><span class="addon-price">$697</span></div>
-      <div class="addon"><span class="addon-name">Third-party integration, each</span><span class="addon-price">$497</span></div>
-      <div class="addon"><span class="addon-name">Data migration from your current CRM</span><span class="addon-price">$497</span></div>
-      <div class="addon"><span class="addon-name">Additional user role</span><span class="addon-price">$197</span></div>
-      <div class="addon"><span class="addon-name">AI voice or call handling</span><span class="addon-price">$997</span></div>
-      <div class="addon"><span class="addon-name">Extra training session</span><span class="addon-price">$297</span></div>
+      <div class="addon"><span class="addon-name">SMS & text automation</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">Calendar & booking sync</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">Email drip sequence, 7-touch</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">Custom reporting dashboard</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">Third-party integration, each</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">Data migration from your current CRM</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">Additional user role</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">AI voice or call handling</span><span class="addon-price">flat add-on</span></div>
+      <div class="addon"><span class="addon-name">Extra training session</span><span class="addon-price">flat add-on</span></div>
     </div>
   </div>
 </section>
@@ -1466,7 +1475,7 @@ footer {
   </div>
   <div class="footer-links">
     <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
+    <a href="#pricing">Packages</a>
     <a href="#crm-intake">Start a Project</a>
   </div>
   <div class="footer-note">
