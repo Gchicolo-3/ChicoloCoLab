@@ -21,4 +21,15 @@ export type IntakeConfig = {
 export type Answer = { v?: string; c?: string[]; n?: string };
 export type Answers = Record<string, Answer>;
 
-export type IntakeClient = { name: string; configKey: string; token: string };
+export type IntakeClient = { id: string; slug: string; name: string; configKey: string; token: string };
+
+export type IntakeResponse = {
+  answers: Answers;
+  currentStep: number;
+  startedAt: string;
+  updatedAt: string;
+  submittedAt: string | null;
+  notifiedAt: string | null;
+};
+
+export type ClientStatus = { client: IntakeClient; response: IntakeResponse | null };

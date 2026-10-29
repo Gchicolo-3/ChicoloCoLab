@@ -15,28 +15,43 @@ type Props = {
   config: IntakeConfig;
   initialAnswers?: Answers;
   initialStep?: number;
+  initialDone?: boolean;
   onSubmit?: () => Promise<void>;
+  onAnswerChange?: (qid: string, answer: Answer, step: number) => void;
+  onStepChange?: (step: number) => void;
 };
 
 // step: -1 intro, 0..n-1 questions, n review
-export default function IntakeForm({ config, initialAnswers = {}, initialStep = -1, onSubmit }: Props) {
+export default function IntakeForm({
+  config,
+  initialAnswers = {},
+  initialStep = -1,
+  initialDone = false,
+  onSubmit,
+  onAnswerChange,
+  onStepChange,
+}: Props) {
   const { questions } = config;
   const n = questions.length;
   const [answers, setAnswers] = useState<Answers>(initialAnswers);
   const [step, setStep] = useState(Math.max(-1, Math.min(initialStep, n)));
   const [submitting, setSubmitting] = useState(false);
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(initialDone);
   const [error, setError] = useState("");
 
   const goTo = (s: number) => {
     setStep(s);
+    onStepChange?.(s);
     window.scrollTo(0, 0);
   };
   const next = () => goTo(Math.min(step + 1, n));
   const back = () => goTo(step > 0 ? step - 1 : -1);
 
-  const update = (id: string, patch: Answer) =>
+  const update = (id: string, patch: Answer) => {
+    const merged = { ...answers[id], ...patch };
     setAnswers((prev) => ({ ...prev, [id]: { ...prev[id], ...patch } }));
+    onAnswerChange?.(id, merged, step);
+  };
 
   const submit = async () => {
     setSubmitting(true);
