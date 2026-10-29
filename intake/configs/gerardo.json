@@ -1,0 +1,281 @@
+{
+  "key": "gerardo",
+  "title": "BD Tool Intake",
+  "intro": {
+    "section": "For Gerardo",
+    "heading": "A few questions so I can build your tool around how you actually work.",
+    "hint": "About 15 minutes. One question at a time. Skip anything you don't know, and stop anytime. Your answers stay on this phone until you send them.",
+    "tip": "Tip: tap the mic on your keyboard and just talk."
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "section": "About you",
+      "question": "In one sentence, how do you describe what you do to someone you just met?",
+      "type": "text"
+    },
+    {
+      "id": "q2",
+      "section": "About you",
+      "question": "Which services do you want more of?",
+      "hint": "The one or two jobs you'd love to do more.",
+      "type": "text"
+    },
+    {
+      "id": "q3",
+      "section": "About you",
+      "question": "What's your best type of job?",
+      "hint": "The one you'd take every single time.",
+      "type": "text"
+    },
+    {
+      "id": "q4",
+      "section": "About you",
+      "question": "What towns or counties do you work in?",
+      "hint": "And anywhere you won't go.",
+      "type": "text"
+    },
+    {
+      "id": "q5",
+      "section": "About you",
+      "question": "What's your best line?",
+      "hint": "The one that makes someone say \"I need that guy.\"",
+      "type": "text"
+    },
+    {
+      "id": "q6",
+      "section": "Your people",
+      "question": "Who sends you work today?",
+      "type": "multi",
+      "options": [
+        "Past customers",
+        "NJBA",
+        "BNI",
+        "Realtors",
+        "Architects or designers",
+        "Other contractors",
+        "Subs",
+        "Property managers",
+        "Friends and family",
+        "Other"
+      ],
+      "note": "Anyone else? Name them."
+    },
+    {
+      "id": "q7",
+      "section": "Your people",
+      "question": "Which groups are you in, and how often do they meet?",
+      "type": "text"
+    },
+    {
+      "id": "q8",
+      "section": "Your people",
+      "question": "Name your top 5 referral sources right now.",
+      "hint": "One line on each is plenty.",
+      "type": "text"
+    },
+    {
+      "id": "q9",
+      "section": "Your people",
+      "question": "Who should be sending you work but isn't?",
+      "hint": "Names or types of people.",
+      "type": "text"
+    },
+    {
+      "id": "q10",
+      "section": "Your people",
+      "question": "Should your subs be in this tool?",
+      "type": "single",
+      "options": [
+        "Yes, they send me work",
+        "Some of them",
+        "No, just people I hire"
+      ]
+    },
+    {
+      "id": "q11",
+      "section": "Your people",
+      "question": "How many people are real referral relationships for you?",
+      "type": "single",
+      "options": [
+        "About 10",
+        "About 25",
+        "About 50",
+        "100 plus"
+      ]
+    },
+    {
+      "id": "q12",
+      "section": "Following up",
+      "question": "After you meet someone new, what actually happens next?",
+      "hint": "Be honest. No wrong answer.",
+      "type": "text"
+    },
+    {
+      "id": "q13",
+      "section": "Following up",
+      "question": "How often should you touch base with a solid referral partner?",
+      "type": "single",
+      "options": [
+        "Monthly",
+        "Every 2 months",
+        "Quarterly",
+        "Depends on the person"
+      ]
+    },
+    {
+      "id": "q14",
+      "section": "Following up",
+      "question": "How do you like to reach out?",
+      "type": "multi",
+      "options": [
+        "Text",
+        "Call",
+        "Email",
+        "Coffee",
+        "Lunch",
+        "Swing by"
+      ]
+    },
+    {
+      "id": "q15",
+      "section": "Following up",
+      "question": "Who have you sent work to lately?",
+      "hint": "Giving back matters. The tool will remind you of that too.",
+      "type": "text"
+    },
+    {
+      "id": "q16",
+      "section": "Past customers",
+      "question": "About how many customers have you done work for in the last three years?",
+      "type": "single",
+      "options": [
+        "Under 100",
+        "100 to 300",
+        "300 to 1,000",
+        "1,000 plus"
+      ]
+    },
+    {
+      "id": "q17",
+      "section": "Past customers",
+      "question": "What's your office CRM called, and can the office export a list from it?",
+      "hint": "Name, phone, email, type of job, and date is all I need.",
+      "type": "text"
+    },
+    {
+      "id": "q18",
+      "section": "Past customers",
+      "question": "Should the tool remind you to personally check in with past customers?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "Yes, but loop in the office",
+        "No, the office handles that"
+      ]
+    },
+    {
+      "id": "q19",
+      "section": "Past customers",
+      "question": "About 30% of your work comes from past customers. What's a good number a year from now?",
+      "type": "single",
+      "options": [
+        "40%",
+        "50%",
+        "60% plus",
+        "Not sure"
+      ]
+    },
+    {
+      "id": "q20",
+      "section": "Day to day",
+      "question": "When would you actually look at a daily list?",
+      "type": "single",
+      "options": [
+        "Before my first appointment",
+        "At lunch",
+        "End of the day"
+      ]
+    },
+    {
+      "id": "q21",
+      "section": "Day to day",
+      "question": "Realistically, how many people a day can you reach out to?",
+      "type": "single",
+      "options": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "id": "q22",
+      "section": "Day to day",
+      "question": "Do you use Gmail and Google Calendar for work?",
+      "type": "single",
+      "options": [
+        "Both",
+        "Gmail only",
+        "Calendar only",
+        "Neither"
+      ],
+      "note": "Which email address?"
+    },
+    {
+      "id": "q23",
+      "section": "Day to day",
+      "question": "Will anyone else use this?",
+      "hint": "Reed, someone in the office? Who should see what?",
+      "type": "text"
+    },
+    {
+      "id": "q24",
+      "section": "Day to day",
+      "question": "Are you getting the Plaud?",
+      "type": "single",
+      "options": [
+        "Already have it",
+        "Ordering it",
+        "Not yet"
+      ]
+    },
+    {
+      "id": "q25",
+      "section": "Your voice",
+      "question": "Paste 3 to 5 real texts you've sent to a referral partner or past customer.",
+      "hint": "Copy them straight from your phone. Don't clean them up. This is how the drafts end up sounding like you.",
+      "type": "long"
+    },
+    {
+      "id": "q26",
+      "section": "Your voice",
+      "question": "Any words or phrases you'd never say?",
+      "type": "text"
+    },
+    {
+      "id": "q27",
+      "section": "Rules",
+      "question": "Anything the tool should never do on its own?",
+      "hint": "Nothing goes out unless you tap send. That's the default.",
+      "type": "text"
+    },
+    {
+      "id": "q28",
+      "section": "Rules",
+      "question": "90 days from now, what would make this worth it?",
+      "type": "multi",
+      "options": [
+        "More referrals coming in",
+        "More past customer jobs",
+        "More meetings",
+        "Not forgetting people"
+      ]
+    },
+    {
+      "id": "q29",
+      "section": "Wrap up",
+      "question": "Anything else I should know?",
+      "type": "text"
+    }
+  ]
+}
