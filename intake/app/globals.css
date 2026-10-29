@@ -53,3 +53,26 @@ footer{position:sticky;bottom:0;background:var(--bg);padding-block:12px calc(14p
 .status{font-size:14px;color:var(--accent);min-height:20px;margin:0}
 .brand{font-size:12px;color:var(--muted);text-align:center;padding-block:4px 0;letter-spacing:.06em;text-transform:uppercase}
 @media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+
+/* Admin pages */
+.admin{max-width:720px;margin:0 auto;padding:20px max(16px,env(safe-area-inset-left,0px)) 40px;display:flex;flex-direction:column;gap:14px}
+.admin h1{font-size:28px}
+.admin-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.admin-head .btn{min-height:44px;font-size:15px}
+.admin-back{color:var(--accent);font-size:15px}
+.admin-list{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.admin-list li+li{border-top:1px solid var(--line)}
+.admin-list a{display:flex;flex-direction:column;gap:2px;padding:14px;color:inherit;text-decoration:none}
+.admin-name{font-weight:600}
+.admin-status{font-size:14px;color:var(--muted);margin:0}
+.admin-status.submitted{color:var(--accent)}
+.admin-status.in_progress{color:var(--mark)}
+.admin-answers{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.admin-answers li{padding:12px 14px;display:flex;flex-direction:column;gap:2px;font-size:15px}
+.admin-answers li+li{border-top:1px solid var(--line)}
+.admin-answers .rq{color:var(--muted)}
+.admin-answers .ra{white-space:pre-wrap;word-break:break-word}
+.admin-answers .ra.skipped{color:var(--muted);font-style:italic}
+.admin-login{display:flex;flex-direction:column;gap:10px;max-width:420px}
+.admin-login label{font-size:14px;color:var(--muted)}
+.admin .btn.primary{flex:none}
